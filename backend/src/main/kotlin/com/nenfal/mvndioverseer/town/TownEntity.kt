@@ -26,6 +26,4 @@ class TownEntity(
 
     @Column(name = "town_rate", precision = 3, scale = 2)
     var townRate: BigDecimal? = null
-) {
-    constructor() : this(UUID.randomUUID(), UUID.randomUUID(),"", "", null)
-}
+)
