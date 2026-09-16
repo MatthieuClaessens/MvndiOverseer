@@ -17,7 +17,6 @@ class TownEntity(
     @Column(name = "town_mayor_id", nullable = false)
     var townMayorId: UUID,
 
-
     @Column(name = "town_name", nullable = false)
     var townName: String,
 
