@@ -14,11 +14,18 @@ class TownEntity(
     @Column(name = "town_id", updatable = false, nullable = false)
     val townId: UUID,
 
+    @Column(name = "town_mayor_id", nullable = false)
+    var townMayorId: UUID,
+
+
     @Column(name = "town_name", nullable = false)
     var townName: String,
+
+    @Column(name = "town_mayor_name", nullable = false)
+    var townMayorName: String,
 
     @Column(name = "town_rate", precision = 3, scale = 2)
     var townRate: BigDecimal? = null
 ) {
-    constructor() : this(UUID.randomUUID(), "", null)
+    constructor() : this(UUID.randomUUID(), UUID.randomUUID(),"", "", null)
 }
