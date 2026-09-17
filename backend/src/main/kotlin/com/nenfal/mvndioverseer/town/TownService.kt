@@ -37,7 +37,7 @@ class TownService(
 
     fun editTownRating(townId: UUID, townRate: BigDecimal): TownDTO {
         val town = ensureTownExists(townId)
-        town.townRate = (town.townRate ?: BigDecimal.ZERO) + townRate
+        town.townRate = townRate
         return townMapper.toDTO(townRepository.save(town));
     }
 
